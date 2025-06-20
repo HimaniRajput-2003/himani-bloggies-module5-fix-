@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bloggies Viral Engine - Module 5 Legal Pages & Opt-Out UI
 
-## Getting Started
+This project implements Module 5 of the Bloggies Viral Engine, focusing on Legal Pages and Opt-Out UI functionality.
 
-First, run the development server:
+## Features
 
+- Legal documentation pages (Terms & Conditions, Raffle Rules, FAQ)
+- Opt-out functionality with 45-day countdown
+- Admin panel showing user credits and raffle entries
+- Raffle widget embedded on all pages
+
+## Tech Stack
+
+- Frontend: React with Next.js and Tailwind CSS
+- Backend: Node.js with TypeScript
+- Storage: File-based (markdown and JSON)
+
+## Setup Instructions
+
+### Prerequisites
+
+- Node.js v18+ installed
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/candidate-00X-bloggies-module5.git
+cd candidate-00X-bloggies-module5
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open your browser and navigate to http://localhost:3000
 
-## Learn More
+### Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+No environment variables are required for this project.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Directory Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+bloggies-module5/
+├── public/
+│   └── legal/
+│       ├── terms_placeholder.md       # Terms & Conditions content
+│       ├── raffle_rules_placeholder.md  # Raffle Rules content
+│       └── faq.json                   # FAQ content in JSON format
+├── src/
+│   ├── components/                    # Reusable UI components
+│   ├── pages/                         # Page components and API routes
+│   └── utils/                         # Utility functions
+├── samples/                           # Sample API responses
+```
 
-## Deploy on Vercel
+## Pages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **/** - Homepage
+- **/terms** - Terms & Conditions page
+- **/raffle-rules** - Raffle Rules page
+- **/faq** - Frequently Asked Questions page
+- **/opt-out** - Opt-out page (requires token parameter)
+- **/admin** - Admin panel with user data
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## API Routes
+
+- **/api/legal/terms** - Returns Terms & Conditions markdown content
+- **/api/legal/raffle-rules** - Returns Raffle Rules markdown content
+- **/api/legal/faq** - Returns FAQ items as JSON
+- **/api/opt-out/validate** - Validates an opt-out token
+- **/api/opt-out/process** - Processes an opt-out request
