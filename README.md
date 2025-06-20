@@ -26,8 +26,8 @@ This project implements Module 5 of the Bloggies Viral Engine, focusing on Legal
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/candidate-00X-bloggies-module5.git
-cd candidate-00X-bloggies-module5
+git clone https://https:/github.com/Ayushkush1/ayush-001-bloggies-module5.git
+cd ayush-001-bloggies-module5
 ```
 
 2. Install dependencies
