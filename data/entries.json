@@ -2,6 +2,11 @@
   {
     "token": "abc67",
     "credits": -5,
+    "timestamp": "2025-06-29T17:04:41.081Z"
+  },
+  {
+    "token": "abc67",
+    "credits": -5,
     "timestamp": "2025-06-29T16:56:00.360Z"
   }
 ]
